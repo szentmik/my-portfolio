@@ -144,6 +144,7 @@ strong {
 
 .arrow {
     scale: 2;
+    z-index: 1;
 }
 
 .arrow, .item {
