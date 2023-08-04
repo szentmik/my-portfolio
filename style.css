@@ -1,0 +1,326 @@
+/* Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Roboto:wght@300;500;900&display=swap');
+
+/* colors  */
+:root {
+    --clr1: #264653;
+    --clr2: #2A9D8F;
+    --clr3: #E9C46A;
+    --clr4: #F4A261;
+    --clr5: #E76F51;
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: "Roboto", sanf;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(var(--clr3), var(--clr5) 75%, var(--clr1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-weight: 300;
+    height: 100vh;
+    line-height: 1.5;
+    margin: 0 auto;
+    padding: 1rem 0;
+    position: relative;
+    width: 85%;
+}
+
+h1 {
+    margin-bottom: -1rem;
+    margin-top: .5rem;
+    font-family: "Borel";
+    font-size: 2.5rem;
+}
+
+hr {
+    border: 0;
+    border-top: .5rem dotted #ffffff33;
+    width: 8rem;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+}
+
+nav a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: .2s;
+}
+
+nav i {
+    transition: .2s;
+}
+
+nav a:hover, nav i:hover {
+    scale: 1.5;
+}
+
+nav>div:nth-of-type(2) {
+    margin-left: auto;
+}
+
+nav div:nth-of-type(2)>div {
+    display: flex;
+    gap: 2rem;
+}
+
+/* Mobile menu button  */
+
+
+
+.mobile-menu-btn {
+    display: none;
+    margin-left: auto;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+/* Mobile menu button end  */
+
+ul {
+    list-style: none;
+}
+
+ul a {
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+header {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    gap: 4rem;
+    padding: 7% 0;
+}
+
+header span {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+header img {
+    width: 25rem;
+}
+
+strong {
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+#my-projects {
+    text-align: center;
+}
+
+#my-projects h2 {
+    padding-bottom:  2rem;
+}
+
+.carousel {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    margin-top: 10%;
+    position: relative;
+}
+
+.arrow {
+    scale: 2;
+}
+
+.arrow, .item {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+
+.item {
+    position: relative;
+    display: none;
+}
+
+.item img {
+    filter: grayscale(10);
+    width: 100%;
+    transition: .5s;
+}
+
+.item img:hover {
+    filter: none;
+    scale: 1.2;
+}
+
+#contact {
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+input, textarea {
+    border: 0;
+    border-radius: .5rem;
+    margin: .5rem 0;
+    padding: .5rem;
+}
+
+form button {
+    cursor: pointer;
+    background: linear-gradient(170deg, var(--clr3), var(--clr5) 85%, var(--clr2));
+    color: #ffffff;
+    border: 0;
+    border-radius: .5rem;
+    padding: .5rem;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background: linear-gradient(170deg, var(--clr3), var(--clr5) 50%, var(--clr2));
+}
+
+#contact ul {
+    display: flex;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+#contact ul a {
+    display: block;
+    scale: 1.5;
+    transition: .5s;
+}
+
+#contact ul a:hover {
+    scale: 3;
+}
+
+.show {
+    display: block; 
+}
+
+
+footer {
+    font-size: .75rem;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.up-home {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    height: 3rem;
+    width: 3rem;
+    bottom: 1rem;
+    margin-left: auto;
+}
+
+.up-home i{
+    scale: 2;
+}
+
+.up-home a {
+    color: var(--clr2);
+}
+
+.close-icon {
+    display: none;
+}
+@media screen and (max-width:900px) {
+    body{
+        text-align: center;
+        padding: 1rem .5rem;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        position: relative;
+    }
+
+    nav>div:nth-of-type(2) {
+        background: #E76F51dd;
+        overflow: hidden;
+        padding: 0;
+        position: fixed;
+        top: 1rem;
+        right: 5%;
+        max-height: 0%;
+        width: 90%;
+        z-index: 1;
+        transition: 1s;
+    }
+
+    nav>div:nth-of-type(2)>div {
+        display: flex;
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+
+  
+
+    .close-icon {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 2rem;
+    }
+
+    .rotate {
+        rotate: 540deg;
+    }
+
+    header img {
+        width: 15rem;
+    }
+
+    header, .carousel {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header span {
+        font-size: 1.2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        line-height: 1.5;
+    }
+
+    .arrow {
+        position: absolute;
+        bottom: -3rem;
+    }
+
+    .arrow:first-of-type{
+        font-size: 1rem;
+        left: 4rem;
+    }
+
+    .arrow:last-of-type {
+        font-size: 1rem;
+        right: 4rem;
+    }
+}
